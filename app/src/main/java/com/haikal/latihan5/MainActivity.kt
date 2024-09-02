@@ -12,6 +12,7 @@ class MainActivity : AppCompatActivity() {
 
     private lateinit var btnKonversiSuhu : Button
     private lateinit var btnHitungBelanja : Button
+    private lateinit var btnBangunRuang : Button
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -20,6 +21,7 @@ class MainActivity : AppCompatActivity() {
 
         btnKonversiSuhu = findViewById(R.id.btnKonversiSuhu)
         btnHitungBelanja = findViewById(R.id.btnHitungBelanja)
+        btnBangunRuang = findViewById(R.id.btnBangunRuang)
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
@@ -35,6 +37,11 @@ class MainActivity : AppCompatActivity() {
         btnHitungBelanja.setOnClickListener() {
             val intent2 = Intent(this@MainActivity, DiskonBelanjaActivity::class.java)
             startActivity(intent2)
+        }
+
+        btnBangunRuang.setOnClickListener() {
+            val intent3 = Intent(this@MainActivity, BangunRuangActivity::class.java)
+            startActivity(intent3)
         }
 
     }
