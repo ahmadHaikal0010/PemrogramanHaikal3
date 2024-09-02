@@ -5,40 +5,45 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".DiskonBelanjaActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:padding="15sp">
 
         <TextView
-            android:id="@+id/textView"
+            android:id="@+id/textView2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="30sp"
-            android:text="Latihan 5"
+            android:layout_marginTop="20sp"
+            android:text="Diskon Belanja"
             android:textAlignment="center"
-            android:textColor="#9C27B0"
             android:textSize="34sp"
             android:textStyle="bold" />
 
-        <Button
-            android:id="@+id/btnKonversiSuhu"
+        <EditText
+            android:id="@+id/etTotalBelanja"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="20sp"
-            android:layout_marginTop="40sp"
-            android:layout_marginRight="20sp"
-            android:text="Konversi Suhu" />
+            android:layout_marginTop="15sp"
+            android:ems="10"
+            android:hint="Total Belanja"
+            android:inputType="text" />
 
         <Button
-            android:id="@+id/btnHitungBelanja"
+            android:id="@+id/btnDiskon"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="20sp"
-            android:layout_marginTop="15sp"
-            android:layout_marginRight="20sp"
-            android:text="Menghitung Diskon Belanja" />
+            android:text="Hitung Diskon" />
+
+        <TextView
+            android:id="@+id/txtHasilDiskon"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20sp"
+            android:textSize="20sp"
+            android:textStyle="bold" />
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

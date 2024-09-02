@@ -11,6 +11,7 @@ import androidx.core.view.WindowInsetsCompat
 class MainActivity : AppCompatActivity() {
 
     private lateinit var btnKonversiSuhu : Button
+    private lateinit var btnHitungBelanja : Button
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -18,6 +19,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         btnKonversiSuhu = findViewById(R.id.btnKonversiSuhu)
+        btnHitungBelanja = findViewById(R.id.btnHitungBelanja)
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
@@ -26,8 +28,13 @@ class MainActivity : AppCompatActivity() {
         }
 
         btnKonversiSuhu.setOnClickListener() {
-            var intent = Intent(this@MainActivity, KonversiSuhuActivity::class.java)
+            val intent = Intent(this@MainActivity, KonversiSuhuActivity::class.java)
             startActivity(intent)
+        }
+
+        btnHitungBelanja.setOnClickListener() {
+            val intent2 = Intent(this@MainActivity, DiskonBelanjaActivity::class.java)
+            startActivity(intent2)
         }
 
     }
